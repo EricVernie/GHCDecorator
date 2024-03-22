@@ -1,0 +1,5 @@
+# Add your project dependencies here
+flask==3.0.2
+jose==1.0.0
+python-jose==3.3.0
+requests==2.26.0

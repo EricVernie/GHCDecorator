@@ -1,0 +1,30 @@
+{
+    "python.analysis.extraPaths": [
+        "./src",
+        "./src/module",
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    // "editor.tokenColorCustomizations": {
+    //     "textMateRules": [
+    //         {
+    //             "scope": [
+    //                 "source.python"
+    //             ],
+    //             "settings": {     
+    //                 "fontStyle": "bold",
+    //                 "foreground": "#13c54f"
+                    
+    //             }
+    //         }
+    //     ]
+    // }
+}
+    
