@@ -33,7 +33,9 @@ def validate_token(role):
             # Pour cet exemple, nous supposons que vous avez une fonction `decode_token` qui fait cela.
             
             decoded_token: Dict[str,str] = decode_token(token)
-
+            if not decoded_token:
+                abort(403, description="Invalid token")
+            # TODO: Faire un test sur la casse des scopes et des roles
             if 'User_Impersonation' not in decoded_token['scp']:
                 abort(403, description="User_Impersonation scope required")
             

@@ -13,6 +13,19 @@ from typing import Dict, Any
 __all__ = ['decode_token']
 
 def decode_token(token):
+    """
+    Décode un jeton JWT en utilisant la clé RSA fournie.
+
+    Args:
+        token (str): Le jeton JWT à décoder.
+
+    Returns:
+        dict: Le jeton décodé sous forme de dictionnaire.
+
+    Raises:
+        JWTError: Si le jeton est invalide.
+
+    """
     # Récupérer les clés publiques
     jwks_uri:  str = "https://login.microsoftonline.com/common/discovery/keys"
     response = requests.get(jwks_uri)
@@ -48,6 +61,8 @@ def decode_token(token):
                                                 })   
 
         return decoded_token
-    except JWTError:
+    except JWTError as e:
         # Le jeton est invalide
+        print(e)
+
         return None

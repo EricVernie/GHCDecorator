@@ -5,7 +5,7 @@ SCOPE                   = "User_Impersonation"
 # JWT settings
 JWT_ALGORITHMS          = ["RS256"]
 JWT_PUBLIC_KEY_URL      = "https://login.microsoftonline.com/common/discovery/keys"
-VERIFY_EXP              = True
+VERIFY_EXP              = False
 VERIFY_AUDIENCE         = False
 VERIFY_ISSUER           = False
 VERIFY_NBF              = False
