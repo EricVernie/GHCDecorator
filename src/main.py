@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def health():
-    return 'status, healthy!'
+    return 'status, healthy! v.0.0.1', 200
 
 @app.route('/hello')
 @validate_token('Data.Reader')
